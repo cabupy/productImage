@@ -1,0 +1,23 @@
+<h1>Products</h1>
+<div class="row">
+  {{#each products}}
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <img class="responsive-img" src="{{ productImage }}">
+          <span class="card-title">{{ name }}</span>
+        </div>
+        <div class="card-content center-align">
+          <h6>{{name}}</h6>
+          <p class="story-text">Price: {{price}}</p>
+          <br>
+        </div>
+        <div class="card-action center-align">
+          <a class="btn grey" href="/product/show/{{_id}}">Detail</a>
+        </div>
+      </div>
+    </div>
+  {{else}}
+    <p>No stories found</p>
+  {{/each}}
+</div>
